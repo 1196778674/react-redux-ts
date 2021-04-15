@@ -1,11 +1,12 @@
 import React, {FC} from 'react';
 import { Layout, Menu, Typography } from 'antd'
 import styled from 'styled-components';
-import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
+// import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import Logo from "../assets/images/logo.jpeg";
+import { Link } from 'react-router-dom'
 
 const { Header, Content, Sider } = Layout;
-const { SubMenu } = Menu;
+// const { SubMenu } = Menu;
 const { Title } = Typography
 
 export const ContentStyle = styled(Content)`
@@ -52,11 +53,11 @@ const Index: FC  = ({children}) => {
                     <SiderStyle width={200}>
                     <Menu
                         mode="inline"
-                        defaultSelectedKeys={['1']}
+                        // defaultSelectedKeys={[]}
                         defaultOpenKeys={['sub1']}
                         style={{ height: '100%' }}
                     >
-                        <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
+                        {/* <SubMenu key="sub1" icon={<UserOutlined />} title="subnav 1">
                         <Menu.Item key="1">option1</Menu.Item>
                         <Menu.Item key="2">option2</Menu.Item>
                         <Menu.Item key="3">option3</Menu.Item>
@@ -73,7 +74,10 @@ const Index: FC  = ({children}) => {
                         <Menu.Item key="10">option10</Menu.Item>
                         <Menu.Item key="11">option11</Menu.Item>
                         <Menu.Item key="12">option12</Menu.Item>
-                        </SubMenu>
+                        </SubMenu> */}
+                        <Menu.Item key="1">
+                            <Link to='/wenzhang'>文章</Link>
+                        </Menu.Item>
                     </Menu>   
                     </SiderStyle>
                     <ContentBody>{children}</ContentBody>

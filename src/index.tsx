@@ -4,6 +4,7 @@ import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.less'
 import {createGlobalStyle} from 'styled-components';
+import { BrowserRouter } from 'react-router-dom'
 
 export const GlobalStyle = createGlobalStyle`
   #root{
@@ -18,7 +19,9 @@ export const GlobalStyle = createGlobalStyle`
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle/>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
