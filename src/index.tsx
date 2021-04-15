@@ -3,9 +3,21 @@ import ReactDOM from 'react-dom';
 import App from './views/App';
 import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.less'
+import {createGlobalStyle} from 'styled-components';
+
+export const GlobalStyle = createGlobalStyle`
+  #root{
+    height: 100%;
+    #layout{
+      height: 100%;
+    }
+  }
+`;
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <GlobalStyle/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
