@@ -82,6 +82,9 @@ const Index: FC  = ({children}) => {
                         <Menu.Item key="2">
                             <Link to='/typescripts'>TS注意点总结</Link>
                         </Menu.Item>
+                        <Menu.Item key="3">
+                            <Link to='/webwork'>webWork解析Blob</Link>
+                        </Menu.Item>
                     </Menu>   
                     </SiderStyle>
                     <ContentBody>{children}</ContentBody>
