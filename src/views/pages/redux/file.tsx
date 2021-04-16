@@ -22,7 +22,7 @@ const File: React.FC = () => {
 
     return (
         <Container>
-            <Title level={3}>react-redux原理及使用</Title>
+            <Title level={3}>react-redux和redux-thunk使用</Title>
             <Paragraph>
                 <Paragraph>
                     <Text strong>为什么要使用Redux?</Text>
@@ -49,7 +49,17 @@ const File: React.FC = () => {
             </Paragraph>
             <Divider/>
             <Paragraph>
-                <Text>详情参考: <TextLink underline onClick={toOther}>官网文档</TextLink></Text>
+                <Paragraph>
+                    <Text strong>redux-thunk的作用</Text>
+                </Paragraph>
+                <Paragraph>
+                    <Text strong>用作异步：</Text>
+                    <Text>redux-thunk 是一个比较流行的 <Text mark>redux 异步 action 中间件</Text>，比如 action 中有通用远程 API 这些场景，那么久应该使用 redux-thunk 了。redux-thunk 帮助你统一了异步和同步 action 的调用方式，把异步过程放在 action 级别解决，对 component 没有影响。</Text>
+                </Paragraph>
+            </Paragraph>
+            <Divider/>
+            <Paragraph>
+                <Text>详情参考: <TextLink underline onClick={toOther}>react-redux官网文档</TextLink></Text>
             </Paragraph>
         </Container>
     )

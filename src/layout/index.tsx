@@ -79,6 +79,9 @@ const Index: FC  = ({children}) => {
                         <Menu.Item key="1">
                             <Link to='/redux'>react配置redux</Link>
                         </Menu.Item>
+                        <Menu.Item key="2">
+                            <Link to='/typescripts'>TS注意点总结</Link>
+                        </Menu.Item>
                     </Menu>   
                     </SiderStyle>
                     <ContentBody>{children}</ContentBody>
