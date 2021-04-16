@@ -5,6 +5,8 @@ import reportWebVitals from './reportWebVitals';
 import 'antd/dist/antd.less'
 import {createGlobalStyle} from 'styled-components';
 import { BrowserRouter } from 'react-router-dom'
+import {Provider} from "react-redux";
+import store from './store'
 
 export const GlobalStyle = createGlobalStyle`
   #root{
@@ -18,10 +20,12 @@ export const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle/>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <GlobalStyle/>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
