@@ -23,6 +23,7 @@ const SiderStyle = styled(Sider)`
 const ContentBody = styled(Content)`
     padding: 20px;
     min-height: calc(100% - 200px);
+    overflow-y: scroll;
 `;
 const HeaderStyle = styled(Header)`
     border-bottom: 1px solid #fafafa;
