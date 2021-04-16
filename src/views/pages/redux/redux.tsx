@@ -1,15 +1,20 @@
 import React, { useCallback } from 'react';
 import { connect } from 'react-redux'
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
+import styled from 'styled-components';
+import Com1 from './child1'
+import Com2 from './child2'
 
-const mapStateToProps = (state: any) => {
-    const { test } = state
-    return {
-        count: test.count
-    }
-}
+const { Title } = Typography;
 
-const mapDispatchToProps = (dispatch: any) => {
+export const TitleStyle = styled.div`
+  
+`;
+
+
+const mapStateToProps = (state: any) => {}
+
+const mapDispatchToProps = (dispatch: Function) => {
     return {
         add: (number: number) => {
             dispatch({type: 'increment', payload: number})
@@ -27,7 +32,7 @@ interface IProps {
 }
 
 
-const Redux: React.FC<IProps> = ({count, add ,jian}) => {
+const Redux: React.FC<IProps> = ({ add ,jian}) => {
     const adds = useCallback(() => {
         add(1)
     },[add])
@@ -37,7 +42,9 @@ const Redux: React.FC<IProps> = ({count, add ,jian}) => {
 
     return (
         <>
-            {count}
+            <Title level={3}>这是一个Dome</Title>
+            <Com1/>
+            <Com2/>
             <Button onClick={adds}>+</Button>
             <Button onClick={jians}>-</Button>
         </>
