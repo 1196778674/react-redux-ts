@@ -76,7 +76,7 @@ const Index: FC  = ({children}) => {
                         <Menu.Item key="12">option12</Menu.Item>
                         </SubMenu> */}
                         <Menu.Item key="1">
-                            <Link to='/wenzhang'>文章</Link>
+                            <Link to='/redux'>react配置redux</Link>
                         </Menu.Item>
                     </Menu>   
                     </SiderStyle>

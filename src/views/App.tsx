@@ -4,14 +4,14 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 
 import notFound from './404'
 import home from './home'
-import wenzhang from './pages/wenzhang'
+import redux from './pages/redux'
 
 const APP: FC = () => {
   return (
     <Layout>
         <Switch>
           <Route path="/home" component={home}/>
-          <Route path="/wenzhang" component={wenzhang}/>
+          <Route path="/redux" component={redux}/>
           <Redirect to="/home"/>
           <Route path="*" component={notFound}/>
         </Switch>
