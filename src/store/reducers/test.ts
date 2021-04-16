@@ -1,4 +1,10 @@
-import { initState } from '../actions'
+
+import { ADD, JIAN, ASYNCADD } from '../actionTypes'
+
+// states
+export const initState = {
+    count: 1
+}
 
 interface IAction {
     type: string
@@ -8,13 +14,17 @@ interface IAction {
 const test = (state = initState, action: IAction) => {
     const { type, payload } = action
     switch (type){
-        case "increment":
+        case ADD:
             return {
                 count:state.count+Number(payload)
             }
-        case "decrement":
+        case JIAN:
             return {
                 count:state.count-Number(payload)
+            }
+        case ASYNCADD:
+            return {
+                count:state.count+Number(payload)
             }
         default :
         return state 
