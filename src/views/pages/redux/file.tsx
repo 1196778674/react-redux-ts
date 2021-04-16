@@ -8,9 +8,18 @@ export const Container = styled.div`
   width: 100%;
   margin: 20px 0px;
 `;
+export const TextLink = styled(Text)`
+  cursor: pointer;
+  color: #1890ff;
+`;
 
 
 const File: React.FC = () => {
+
+    const toOther = () => {
+        window.open('http://cn.redux.js.org/docs/basics/ExampleTodoList.html', '_blank')
+    }
+
     return (
         <Container>
             <Title level={3}>react-redux原理及使用</Title>
@@ -39,6 +48,9 @@ const File: React.FC = () => {
                 </Paragraph>
             </Paragraph>
             <Divider/>
+            <Paragraph>
+                <Text>详情参考: <TextLink underline onClick={toOther}>官网文档</TextLink></Text>
+            </Paragraph>
         </Container>
     )
 }
